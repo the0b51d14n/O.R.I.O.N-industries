@@ -1,0 +1,115 @@
+# ===========================
+# DEPENDENCIES
+# ===========================
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ===========================
+# ENVIRONMENT VARIABLES
+# ===========================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# ===========================
+# NEXT.JS
+# ===========================
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+
+# ===========================
+# PRISMA
+# ===========================
+prisma/migrations/dev/
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pino.log
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ===========================
+# TYPESCRIPT
+# ===========================
+*.tsbuildinfo
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================
+# EDITORS
+# ===========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+
+# ===========================
+# DOCKER
+# ===========================
+docker/data/
+docker/volumes/
+
+# ===========================
+# UPLOADS & ASSETS LOCAUX
+# ===========================
+uploads/
+public/uploads/
+backend/uploads/
+
+# ===========================
+# CACHE
+# ===========================
+.turbo/
+.vercel/
+.cache/
+.parcel-cache/
+*.tgz
+
+# ===========================
+# TESTS & COVERAGE
+# ===========================
+coverage/
+.nyc_output/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# ===========================
+# MISC
+# ===========================
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
