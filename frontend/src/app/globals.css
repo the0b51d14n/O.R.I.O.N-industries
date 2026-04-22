@@ -1,26 +1,154 @@
-@import "tailwindcss";
+/* ============================================
+   À AJOUTER DANS frontend/src/app/globals.css
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #09090b;
+  --ink2: #141418;
+  --ink3: #1c1c22;
+  --wire: #2a2a32;
+  --dim: #52525e;
+  --mid: #8a8a96;
+  --pale: #c8c8d2;
+  --bright: #e8e8ef;
+  --white: #f6f6fa;
+  --pure: #ffffff;
+  --lh: rgba(255, 255, 255, 0.055);
+  --lh2: rgba(255, 255, 255, 0.1);
+  --lh3: rgba(255, 255, 255, 0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: var(--pale);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Curseur custom */
+#cur {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--pure);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+#cur-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s;
+}
+
+/* Boutons globaux */
+.btn-a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 38px;
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: none;
+  transition: background 0.2s, transform 0.15s;
+  border-radius: 2px;
+}
+
+.btn-a:hover {
+  background: var(--pure);
+  transform: translateY(-1px);
+}
+
+.btn-b {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 38px;
+  background: transparent;
+  color: var(--pale);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--lh3);
+  cursor: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  border-radius: 2px;
+}
+
+.btn-b:hover {
+  border-color: var(--pale);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Animations reveal au scroll */
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+.rv-d1 {
+  transition-delay: 0.1s;
+}
+
+.rv-d2 {
+  transition-delay: 0.2s;
+}
+
+.rv-d3 {
+  transition-delay: 0.3s;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.15;
+  }
 }
