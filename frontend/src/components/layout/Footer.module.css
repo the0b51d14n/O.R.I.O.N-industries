@@ -1,0 +1,51 @@
+.footer {
+    background: var(--ink);
+    border-top: 1px solid var(--lh);
+    padding: 40px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--mid);
+    text-transform: uppercase;
+}
+
+.copy {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--wire);
+}
+
+.links {
+    display: flex;
+    gap: 28px;
+}
+
+.links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.links a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 980px) {
+    .footer {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+        padding: 40px 24px;
+    }
+}
