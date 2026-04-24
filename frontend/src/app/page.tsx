@@ -140,9 +140,9 @@ export default function HomePage() {
               <div key={d.n} style={{ background: "var(--ink2)", padding: "52px 44px", position: "relative", overflow: "hidden", transition: "background 0.35s" }}
                 onMouseEnter={e => (e.currentTarget.style.background = "var(--ink3)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "var(--ink2)")}>
-                <div style={{ ...s, fontSize: 9, letterSpacing: "0.3em", color: "var(--dim)", textTransform: "uppercase", marginBottom: 20 }}>{d.tag}</div>
+                <DecryptText text={d.tag} duration={1500} style={{ ...s, fontSize: 9, letterSpacing: "0.3em", color: "var(--dim)", textTransform: "uppercase", marginBottom: 20 }} />
                 <DecryptText text={d.name} delay={i * 100} duration={2000} tag="div" style={{ fontSize: 22, fontWeight: 400, color: "var(--white)", marginBottom: 16 }} />
-                <div style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8 }}>{d.desc}</div>
+                <DecryptText text={d.desc} delay={150} duration={3000} tag="div" style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8 }} />
                 <div style={{ position: "absolute", bottom: 0, left: 0, height: 1, width: 0, background: "var(--bright)", transition: "width 0.5s cubic-bezier(0.25,0.46,0.45,0.94)" }}
                   ref={el => { if (el) { el.parentElement!.onmouseenter = () => el.style.width = "100%"; el.parentElement!.onmouseleave = () => el.style.width = "0"; } }} />
               </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
                   ref={el => { if (el) { el.parentElement!.onmouseenter = () => el.style.background = "var(--bright)"; el.parentElement!.onmouseleave = () => el.style.background = "transparent"; } }} />
                 <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 13, letterSpacing: "0.2em", color: "var(--wire)", marginBottom: 24 }}>{v.idx} / 04</div>
                 <DecryptText text={v.title} delay={i * 80} duration={2500} tag="div" style={{ fontSize: 20, fontWeight: 400, color: "var(--white)", marginBottom: 16, lineHeight: 1.35 }} />
-                <div style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8 }}>{v.desc}</div>
+                <DecryptText text={v.desc} delay={150} duration={3000} tag="div" style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8 }} />
               </div>
             ))}
           </div>
@@ -194,9 +194,9 @@ export default function HomePage() {
               <div key={p.title} style={{ background: "var(--ink2)", padding: "52px 44px", display: "flex", flexDirection: "column", gap: 16, transition: "background 0.3s", position: "relative" }}
                 onMouseEnter={e => (e.currentTarget.style.background = "var(--ink3)")}
                 onMouseLeave={e => (e.currentTarget.style.background = "var(--ink2)")}>
-                <div style={{ ...s, fontSize: 9, letterSpacing: "0.3em", color: "var(--dim)", textTransform: "uppercase" }}>{p.tag}</div>
+                <DecryptText text={p.tag} duration={1500} style={{ ...s, fontSize: 9, letterSpacing: "0.3em", color: "var(--dim)", textTransform: "uppercase" }} />
                 <DecryptText text={p.title} delay={i * 100} duration={2500} tag="div" style={{ fontSize: 22, fontWeight: 400, color: "var(--white)", lineHeight: 1.2 }} />
-                <div style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8, flex: 1 }}>{p.desc}</div>
+                <DecryptText text={p.desc} delay={150} duration={3000} tag="div" style={{ fontSize: 14, fontWeight: 200, color: "var(--mid)", lineHeight: 1.8, flex: 1 }} />
                 <div style={{ display: "inline-flex", alignItems: "center", gap: 8, ...s, fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: p.status === "En développement" ? "var(--bright)" : "var(--dim)" }}>
                   {p.status === "En développement" && <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--white)", display: "inline-block", animation: "pulse 2s infinite" }} />}
                   {p.status}
@@ -256,7 +256,7 @@ export default function HomePage() {
                   ref={el => { if (el) { el.parentElement!.onmouseenter = () => el.style.background = "var(--pale)"; el.parentElement!.onmouseleave = () => el.style.background = "transparent"; } }} />
                 <div style={{ ...s, fontSize: 9, letterSpacing: "0.2em", color: "var(--wire)", marginBottom: 12 }}>{c.n}</div>
                 <DecryptText text={c.name} duration={2000} tag="div" style={{ fontSize: 16, fontWeight: 400, color: "var(--white)", marginBottom: 8 }} />
-                <div style={{ fontSize: 13, fontWeight: 200, color: "var(--dim)", lineHeight: 1.6 }}>{c.desc}</div>
+                <DecryptText text={c.desc} delay={100} duration={2500} tag="div" style={{ fontSize: 13, fontWeight: 200, color: "var(--dim)", lineHeight: 1.6 }} />
               </div>
             ))}
           </div>

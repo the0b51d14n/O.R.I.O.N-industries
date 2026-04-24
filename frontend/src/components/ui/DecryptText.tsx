@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { CSSProperties, ElementType } from "react";
+import type { CSSProperties } from "react";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*/<>[]{}|^~";
 
@@ -11,7 +11,7 @@ interface DecryptTextProps {
   duration?: number;
   className?: string;
   style?: CSSProperties;
-  tag?: ElementType;
+  tag?: string;
 }
 
 export default function DecryptText({
@@ -20,30 +20,39 @@ export default function DecryptText({
   duration = 3500,
   className,
   style,
-  tag: Tag = "span",
+  tag: _tag = "span",
 }: DecryptTextProps) {
-  const elRef = useRef<HTMLElement>(null);
+  const wrapRef = useRef<HTMLSpanElement>(null);
   const rafRef = useRef<number>(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const el = elRef.current;
-    if (!el) return;
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+
+    // Remplace le wrapper span par le bon tag dans le DOM
+    const tag = _tag;
+    const el = document.createElement(tag);
+    el.setAttribute("aria-label", text);
+    el.style.fontVariantNumeric = "tabular-nums";
+    if (className) el.className = className;
+    if (style) Object.assign(el.style, style);
+    wrap.replaceWith(el);
 
     const chars = text.split("");
     const len = chars.length;
 
     const runDecrypt = () => {
-      // Annuler toute animation précédente
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
 
-      // Ordre de résolution aléatoire
-      const resolveOrder = chars.map((_, i) => i).sort(() => Math.random() - 0.5);
       const resolvedAt = new Array<number>(len);
-      resolveOrder.forEach((charIdx, orderIdx) => {
-        resolvedAt[charIdx] = 0.15 + (orderIdx / len) * 0.85;
-      });
+      chars
+        .map((_, i) => i)
+        .sort(() => Math.random() - 0.5)
+        .forEach((charIdx, orderIdx) => {
+          resolvedAt[charIdx] = 0.15 + (orderIdx / len) * 0.85;
+        });
 
       let startTs: number | null = null;
 
@@ -51,7 +60,6 @@ export default function DecryptText({
         const animate = (ts: number) => {
           if (startTs === null) startTs = ts;
           const progress = Math.min((ts - startTs) / duration, 1);
-
           el.textContent = chars
             .map((char, i) => {
               if (char === " ") return " ";
@@ -59,52 +67,49 @@ export default function DecryptText({
               return CHARS[Math.floor(Math.random() * CHARS.length)];
             })
             .join("");
-
           if (progress < 1) {
             rafRef.current = requestAnimationFrame(animate);
           } else {
             el.textContent = text;
           }
         };
-
         rafRef.current = requestAnimationFrame(animate);
       }, delay);
     };
 
-    // Initialiser avec des espaces
+    const reset = () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      el.textContent = chars.map(() => " ").join("");
+    };
+
     el.textContent = chars.map(() => " ").join("");
 
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          runDecrypt();
-        } else {
-          // Reset quand l'élément quitte l'écran → se rejouera à la prochaine apparition
-          if (timeoutRef.current) clearTimeout(timeoutRef.current);
-          if (rafRef.current) cancelAnimationFrame(rafRef.current);
-          el.textContent = chars.map(() => " ").join("");
-        }
+        if (entry.isIntersecting) runDecrypt();
+        else reset();
       },
       { threshold: 0.1 }
     );
-
     obs.observe(el);
 
     return () => {
       obs.disconnect();
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      // Remettre le span placeholder pour le prochain montage
+      el.replaceWith(wrap);
     };
-  }, [text, delay, duration]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <Tag
-      ref={elRef}
+    <span
+      ref={wrapRef}
       className={className}
       style={{ fontVariantNumeric: "tabular-nums", ...style }}
       aria-label={text}
-    >
-      {text.split("").map(() => " ").join("")}
-    </Tag>
+    />
   );
 }
