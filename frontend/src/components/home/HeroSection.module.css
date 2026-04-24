@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 140px 56px 100px;
+    padding: 72px 56px 0;
     position: relative;
     overflow: hidden;
 }
@@ -34,7 +34,7 @@
     letter-spacing: 0.35em;
     color: var(--dim);
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -66,7 +66,7 @@
     letter-spacing: 0.55em;
     color: var(--dim);
     text-transform: uppercase;
-    margin-bottom: 44px;
+    margin-bottom: 36px;
     opacity: 0;
     animation: fadein 0.8s 0.3s forwards;
 }
@@ -77,7 +77,7 @@
     line-height: 1.85;
     color: var(--mid);
     max-width: 460px;
-    margin-bottom: 52px;
+    margin-bottom: 40px;
     opacity: 0;
     animation: fadein 0.8s 0.4s forwards;
 }
@@ -101,13 +101,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 520px;
+    height: 460px;
 }
 
 .orbWrap {
     position: relative;
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
 }
 
 .orbCore {
@@ -167,9 +167,9 @@
 }
 
 .ring3 {
-    width: 350px;
-    height: 350px;
-    margin: -175px 0 0 -175px;
+    width: 340px;
+    height: 340px;
+    margin: -170px 0 0 -170px;
     border-style: dashed;
     animation: spin 60s linear infinite;
     opacity: 0.5;
@@ -204,13 +204,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--lh);
-    margin-top: 64px;
     opacity: 0;
     animation: fadein 0.8s 0.6s forwards;
+    align-self: end;
 }
 
 .hStat {
-    padding: 36px 40px;
+    padding: 28px 40px;
     border-right: 1px solid var(--lh);
 }
 
