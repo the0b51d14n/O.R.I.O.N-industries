@@ -1,133 +1,122 @@
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 800;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 56px;
-    height: 72px;
-    border-bottom: 1px solid var(--lh);
-    background: rgba(9, 9, 11, 0.82);
-    backdrop-filter: blur(28px) saturate(180%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+  height: 72px;
+  border-bottom: 1px solid var(--lh);
+  background: rgba(9, 9, 11, 0.82);
+  backdrop-filter: blur(28px) saturate(180%);
 }
 
 .logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--white);
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--white);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
 }
 
 .logoCircle {
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--lh3);
-    border-radius: 50%;
-    flex-shrink: 0;
-    background: radial-gradient(circle at 35% 35%, var(--lh2), transparent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--lh3);
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: radial-gradient(circle at 35% 35%, var(--lh2), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .logoImg {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-    opacity: 0.85;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.85;
 }
 
 .links {
-    display: flex;
-    gap: 36px;
+  display: flex;
+  gap: 36px;
 }
 
 .links a {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    color: var(--dim);
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color 0.2s;
-    position: relative;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
 }
 
 .links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--white);
-    transition: width 0.3s;
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--white);
+  transition: width 0.3s;
 }
 
 .links a:hover {
-    color: var(--white);
+  color: var(--white);
 }
 
 .links a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .pill {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--mid);
-    text-transform: uppercase;
-    border: 1px solid var(--lh2);
-    padding: 8px 18px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--mid);
+  text-transform: uppercase;
+  border: 1px solid var(--lh2);
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .pill:hover {
-    border-color: var(--lh3);
-    color: var(--white);
+  border-color: var(--lh3);
+  color: var(--white);
 }
 
+/* pulse vient de globals.css — pas de redéfinition ici */
 .pulse {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--white);
-    animation: pulse 2.8s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.15;
-    }
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--white);
+  animation: pulse 2.8s ease-in-out infinite;
 }
 
 @media (max-width: 980px) {
-    .nav {
-        padding: 0 24px;
-    }
+  .nav {
+    padding: 0 24px;
+  }
 
-    .links {
-        display: none;
-    }
+  .links {
+    display: none;
+  }
 }
