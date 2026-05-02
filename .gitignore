@@ -1,0 +1,247 @@
+# =============================================================================
+# ORION INDUSTRIES — .gitignore
+# Monorepo: React + Vite / NestJS / Prisma / PostgreSQL / Docker
+# =============================================================================
+
+
+# =============================================================================
+# ⚠️  SENSITIVE — NEVER COMMIT
+# =============================================================================
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+.env.*.local
+
+# Secrets & credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets/
+.secrets/
+credentials/
+
+# SSL certificates
+ssl/
+certs/
+
+
+# =============================================================================
+# NODE
+# =============================================================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# =============================================================================
+# BUILD OUTPUTS
+# =============================================================================
+
+# Vite / React
+apps/web/dist/
+apps/web/build/
+apps/web/.vite/
+
+# Admin
+apps/admin/dist/
+apps/admin/build/
+apps/admin/.vite/
+
+# NestJS
+apps/api/dist/
+apps/api/build/
+
+# Packages
+packages/*/dist/
+packages/*/build/
+
+# Generic
+dist/
+build/
+out/
+.output/
+
+
+# =============================================================================
+# PRISMA
+# =============================================================================
+
+# Generated client (regenerated via `prisma generate`)
+apps/api/src/database/prisma/generated/
+
+# SQLite local databases (si utilisé en dev)
+*.db
+*.sqlite
+*.sqlite3
+
+
+# =============================================================================
+# CACHE & TEMP
+# =============================================================================
+
+# Turbo / Nx
+.turbo/
+.nx/cache/
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettiercache
+
+# Jest / Vitest
+coverage/
+.nyc_output/
+*.lcov
+
+# Temp files
+tmp/
+temp/
+.tmp/
+.temp/
+
+
+# =============================================================================
+# IDE & EDITORS
+# =============================================================================
+
+# VSCode (on commit uniquement .vscode/extensions.json si souhaité)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (WebStorm, IntelliJ...)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+
+# Volumes locaux
+infrastructure/docker/volumes/
+
+# Override files locaux (gardez docker-compose.yml mais ignorez les overrides perso)
+docker-compose.override.yml
+docker-compose.local.yml
+
+
+# =============================================================================
+# MONITORING & LOGS
+# =============================================================================
+
+infrastructure/monitoring/data/
+infrastructure/monitoring/logs/
+*.heapsnapshot
+*.cpuprofile
+
+
+# =============================================================================
+# SCRIPTS SENSIBLES
+# =============================================================================
+
+# Scripts de déploiement contenant des tokens ou IPs
+scripts/deploy/*.sh.local
+scripts/db/*.sql.local
+
+
+# =============================================================================
+# DIVERS
+# =============================================================================
+
+# Storybook
+storybook-static/
+
+# Sentry
+.sentryclirc
+
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Terraform (si utilisé plus tard)
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.tfvars.example

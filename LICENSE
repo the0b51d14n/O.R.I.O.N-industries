@@ -1,0 +1,164 @@
+ORION INDUSTRIES — PROPRIETARY SOFTWARE LICENSE
+================================================================================
+
+Copyright (c) 2025 Orion Industries
+Founder: Théo ANDRIMANANARISOA
+All rights reserved.
+
+================================================================================
+TERMS AND CONDITIONS
+================================================================================
+
+1. DEFINITIONS
+
+   "Software" refers to the source code, object code, documentation, assets,
+   configuration files, and any other materials contained in this repository,
+   including all applications, packages, and infrastructure configurations
+   belonging to the Orion Industries monorepo.
+
+   "Owner" refers to Orion Industries and its founder(s).
+
+   "Authorized Person" refers to any individual or entity that has received
+   explicit written permission from the Owner to access, use, or contribute
+   to the Software.
+
+   "Contributor" refers to any Authorized Person who submits code, assets,
+   or other materials to the Software under a signed contributor agreement.
+
+
+2. GRANT OF RIGHTS
+
+   The Owner grants Authorized Persons a limited, non-exclusive,
+   non-transferable, revocable right to access and use the Software solely
+   for the purposes explicitly approved in writing by the Owner.
+
+   No other rights are granted, either expressly or by implication.
+
+
+3. RESTRICTIONS
+
+   Unless explicitly authorized in writing by the Owner, no person or entity
+   may:
+
+   a) Copy, reproduce, or duplicate the Software or any portion thereof;
+
+   b) Distribute, publish, sublicense, sell, rent, lease, or otherwise
+      transfer the Software or any derivative works;
+
+   c) Modify, adapt, translate, reverse engineer, decompile, disassemble,
+      or create derivative works based on the Software;
+
+   d) Use the Software for any commercial purpose outside the scope of
+      Orion Industries' own operations;
+
+   e) Remove, alter, or obscure any proprietary notices, labels, or marks
+      on or in the Software;
+
+   f) Use the name "Orion Industries", its logo, or any associated branding
+      without prior written consent from the Owner.
+
+
+4. CONFIDENTIALITY
+
+   The Software contains confidential and proprietary information belonging
+   to Orion Industries. All Authorized Persons must:
+
+   a) Keep the Software strictly confidential;
+
+   b) Not disclose any part of the Software to third parties without prior
+      written consent from the Owner;
+
+   c) Use at least the same degree of care to protect the confidentiality
+      of the Software as they use to protect their own confidential
+      information, but in no event less than reasonable care.
+
+
+5. CONTRIBUTIONS
+
+   Any contribution submitted to this repository by a Contributor shall be
+   deemed assigned to the Owner upon submission. Contributors retain no
+   intellectual property rights over submitted contributions.
+
+   All Contributors must sign a Contributor License Agreement (CLA) before
+   any contribution is accepted into the codebase.
+
+
+6. INTELLECTUAL PROPERTY
+
+   The Software and all copies thereof are proprietary to the Owner and
+   title thereto remains in the Owner at all times. All rights in the
+   Software not specifically granted in this License are reserved to
+   the Owner.
+
+   This includes, without limitation:
+   - All source code and object code
+   - All UI/UX designs, design tokens, and visual assets
+   - All documentation and technical specifications
+   - All trademarks, trade names, and branding materials
+
+
+7. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+   THE OWNER MAKES NO WARRANTY THAT THE SOFTWARE WILL BE ERROR-FREE,
+   UNINTERRUPTED, OR FREE OF HARMFUL COMPONENTS.
+
+
+8. LIMITATION OF LIABILITY
+
+   IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+   TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+9. TERMINATION
+
+   This License is effective until terminated. The Owner may terminate this
+   License at any time, with or without cause, upon written notice to the
+   Authorized Person.
+
+   Upon termination, the Authorized Person must immediately:
+   a) Cease all use of the Software;
+   b) Destroy or return all copies of the Software in their possession;
+   c) Certify in writing to the Owner that such destruction or return has
+      been completed.
+
+   Sections 3, 4, 6, 7, 8, and 10 shall survive termination of this
+   License.
+
+
+10. GOVERNING LAW
+
+    This License shall be governed by and construed in accordance with the
+    laws of France, without regard to its conflict of law provisions.
+
+    Any dispute arising out of or in connection with this License shall be
+    subject to the exclusive jurisdiction of the courts of France.
+
+
+11. ENTIRE AGREEMENT
+
+    This License constitutes the entire agreement between the parties with
+    respect to the Software and supersedes all prior or contemporaneous
+    understandings, agreements, representations, and warranties, whether
+    written or oral, with respect to the Software.
+
+    Any amendment to this License must be in writing and signed by the Owner.
+
+
+================================================================================
+
+For licensing inquiries or to request authorization:
+  Théo ANDRIMANANARISOA — Orion Industries
+  contact@orion-industries.com (placeholder — update when domain is registered)
+
+================================================================================
+
+Copyright (c) 2025 Orion Industries. All rights reserved.
