@@ -45,7 +45,7 @@
         "docker:logs": "docker compose logs -f",
         "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
         "clean:cache": "rm -rf .turbo .nx node_modules/.cache",
-        "prepare": "node scripts/prepare.js 2>/dev/null || true"
+        "prepare": "node scripts/prepare.js || exit 0"
     },
     "devDependencies": {
         "typescript": "^5.4.5",

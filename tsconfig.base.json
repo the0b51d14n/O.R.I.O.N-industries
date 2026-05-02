@@ -1,72 +1,48 @@
 {
-  "name": "orion-industries",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Orion Industries — Monorepo platform (web, api, admin)",
-  "author": {
-    "name": "Théo ANDRIMANANARISOA",
-    "email": "contact@orion-industries.com"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Orion Industries — Base TypeScript Config",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "incremental": true,
+    "composite": true,
+    "ignoreDeprecations": "6.0"
   },
-  "license": "UNLICENSED",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "dev": "npm run dev --workspaces --if-present",
-    "dev:web": "npm run dev --workspace=apps/web",
-    "dev:api": "npm run dev --workspace=apps/api",
-    "dev:admin": "npm run dev --workspace=apps/admin",
-
-    "build": "npm run build --workspaces --if-present",
-    "build:web": "npm run build --workspace=apps/web",
-    "build:api": "npm run build --workspace=apps/api",
-    "build:admin": "npm run build --workspace=apps/admin",
-
-    "start": "npm run start --workspaces --if-present",
-    "start:api": "npm run start:prod --workspace=apps/api",
-
-    "test": "npm run test --workspaces --if-present",
-    "test:web": "npm run test --workspace=apps/web",
-    "test:api": "npm run test --workspace=apps/api",
-    "test:e2e": "npm run test:e2e --workspace=apps/api",
-    "test:cov": "npm run test:cov --workspaces --if-present",
-
-    "lint": "npm run lint --workspaces --if-present",
-    "lint:fix": "npm run lint:fix --workspaces --if-present",
-    "format": "npm run format --workspaces --if-present",
-
-    "typecheck": "npm run typecheck --workspaces --if-present",
-
-    "db:migrate": "npm run prisma:migrate --workspace=apps/api",
-    "db:migrate:prod": "npm run prisma:migrate:prod --workspace=apps/api",
-    "db:generate": "npm run prisma:generate --workspace=apps/api",
-    "db:seed": "npm run prisma:seed --workspace=apps/api",
-    "db:studio": "npm run prisma:studio --workspace=apps/api",
-    "db:reset": "npm run prisma:reset --workspace=apps/api",
-
-    "docker:up": "docker compose up --build",
-    "docker:up:detach": "docker compose up --build -d",
-    "docker:down": "docker compose down",
-    "docker:down:volumes": "docker compose down -v",
-    "docker:logs": "docker compose logs -f",
-
-    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
-    "clean:cache": "rm -rf .turbo .nx node_modules/.cache",
-
-    "prepare": "node scripts/prepare.js 2>/dev/null || true"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5",
-    "prettier": "^3.3.3",
-    "eslint": "^9.9.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1"
-  },
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=10.0.0"
-  }
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/.turbo",
+    "**/.nx",
+    "**/coverage",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.e2e-spec.ts"
+  ]
 }
