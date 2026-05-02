@@ -1,326 +1,386 @@
 <div align="center">
 
-# ⬡ ORION INDUSTRIES
+<img src="./apps/web/public/images/logo.png" alt="Orion Industries" width="110" />
 
-### _Building the invisible layer of tomorrow_
+<br/>
 
-> "Demain, la technologie ne se verra plus. Elle sera là, partout, silencieuse, intégrée à notre environnement, et capable de comprendre ce que nous faisons pour nous aider avant même qu'on le demande.
-> C'est pour cela qu'Orion Industries a été créée : concevoir cette nouvelle génération de systèmes intelligents, où la technologie s'efface pour devenir une extension naturelle de l'intelligence humaine."
->
-> — **Théo ANDRIMANANARISOA**, Founder & CEO
+```
+O R I O N   I N D U S T R I E S
+```
 
----
+**`Technology that disappears. Intelligence that remains.`**
 
-![Status](https://img.shields.io/badge/status-in%20development-orange)
-![License](https://img.shields.io/badge/license-Proprietary-red)
-![Stack](https://img.shields.io/badge/stack-React%20%7C%20NestJS%20%7C%20Prisma%20%7C%20PostgreSQL-blue)
-![Monorepo](https://img.shields.io/badge/monorepo-TBD-lightgrey)
+<br/>
 
-**Website:** `Coming soon` — domain not yet registered
+[![Status](https://img.shields.io/badge/status-in_development-orange?style=flat-square&logoColor=white)]()
+[![Version](https://img.shields.io/badge/version-0.1.0-111111?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-Proprietary-cc0000?style=flat-square)]()
+[![Node](https://img.shields.io/badge/Node.js-≥20-339933?style=flat-square&logo=node.js&logoColor=white)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white)]()
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)]()
+[![NestJS](https://img.shields.io/badge/NestJS-10-E0234E?style=flat-square&logo=nestjs&logoColor=white)]()
+[![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=flat-square&logo=prisma&logoColor=white)]()
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white)]()
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white)]()
+[![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)]()
+
+<br/>
+
+[English](#english) · [Français](#français) · [Español](#español) · [中文](#中文) · [العربية](#العربية)
+
+<br/>
 
 </div>
 
 ---
 
-## Table of contents
+<a name="english"></a>
+## 🌐 English
 
-- [About](#about)
-- [Divisions](#divisions)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
-- [Getting started](#getting-started)
-- [Environment variables](#environment-variables)
-- [Languages](#languages)
-- [Contributing](#contributing)
-- [Founders](#founders)
-- [License](#license)
+### Vision
 
----
+> *"Tomorrow, technology will no longer be visible. It will be everywhere — silent, integrated into our environment, capable of understanding what we do to help us before we even ask.*
+>
+> *This is why Orion Industries was created: to design this new generation of intelligent systems, where technology fades away to become a natural extension of human intelligence."*
+>
+> — **Théo ANDRIMANANARISOA**, Founder & CEO
 
-## About
+### About
 
-**Orion Industries** is a global technology holding company focused on designing the next generation of intelligent systems — where hardware, software, and artificial intelligence converge to create seamless, invisible experiences.
+**Orion Industries** is a global technology holding company engineering the next generation of intelligent systems — where hardware, software, and artificial intelligence converge into seamless, invisible experiences.
 
-The group operates across the full spectrum of technology: from embedded electronics and IoT devices, to cloud infrastructure, AI systems, robotics, and human-centered design. Every division shares the same core belief: technology should disappear into the environment and work _with_ humans, not _at_ them.
+Operating across the full spectrum of technology — from embedded electronics and IoT, to cloud infrastructure, AI, robotics, and human-centered design — the group is driven by one conviction: **technology must disappear into the environment and work *with* humans, not *at* them.**
 
-This repository contains the full monorepo powering the Orion Industries digital platform — corporate website, client portal, internal admin dashboard, and shared packages.
+### Divisions
 
----
+<div align="center">
 
-## Divisions
+| Division | Domain | Status |
+|:---|:---|:---:|
+| ⬡ **Orion Software** | Enterprise software · SaaS platforms · Custom development | `Active` |
+| ⬡ **Orion AI Systems** | Artificial intelligence · Machine learning · Autonomous systems | `Active` |
+| ⬡ **Orion Hardware** | Electronic design · Embedded systems · PCB engineering | `Active` |
+| ⬡ **Orion Robotics** | Industrial robotics · Collaborative automation | `Active` |
+| ⬡ **Orion IoT & Smart Systems** | Connected devices · Domotics · Smart environments | `Active` |
+| ⬡ **Orion Cloud & Infrastructure** | Cloud architecture · DevOps · Cybersecurity | `Active` |
+| ⬡ **Orion Labs** | Applied R&D · Technology incubation · Research | `Active` |
+| ⬡ **Orion Studio** | UI/UX design · Product design · Brand identity | `Optional` |
 
-| Division                         | Focus                                                          | Status   |
-| -------------------------------- | -------------------------------------------------------------- | -------- |
-| **Orion Software**               | Enterprise software, SaaS platforms, custom development        | Active   |
-| **Orion AI Systems**             | Artificial intelligence, machine learning, autonomous systems  | Active   |
-| **Orion Hardware**               | Electronic design, embedded systems, PCB & product engineering | Active   |
-| **Orion Robotics**               | Industrial and collaborative robotics, automation              | Active   |
-| **Orion IoT & Smart Systems**    | Connected devices, domotics, smart environments                | Active   |
-| **Orion Cloud & Infrastructure** | Cloud architecture, DevOps, cybersecurity                      | Active   |
-| **Orion Labs**                   | R&D, applied research, technology incubation                   | Active   |
-| **Orion Studio**                 | UI/UX design, product design, brand identity                   | Optional |
+</div>
 
----
-
-## Tech stack
-
-### Frontend — `apps/web` & `apps/admin`
-
-| Layer     | Technology                              |
-| --------- | --------------------------------------- |
-| Framework | React 18 + Vite                         |
-| Language  | TypeScript                              |
-| Styling   | CSS Modules + Design Tokens             |
-| State     | To be defined (Zustand / Redux Toolkit) |
-| Routing   | React Router v6                         |
-
-### Backend — `apps/api`
-
-| Layer     | Technology             |
-| --------- | ---------------------- |
-| Framework | NestJS                 |
-| Language  | TypeScript             |
-| ORM       | Prisma                 |
-| Database  | PostgreSQL             |
-| Auth      | JWT + Passport.js      |
-| Real-time | WebSockets (Socket.io) |
-
-### Shared packages — `packages/`
-
-| Package            | Role                                      |
-| ------------------ | ----------------------------------------- |
-| `packages/ui`      | Shared component library                  |
-| `packages/types`   | Shared TypeScript types & interfaces      |
-| `packages/utils`   | Shared helpers, validators, formatters    |
-| `packages/i18n`    | Internationalization (EN, FR, ES, ZH, AR) |
-| `packages/testing` | Shared mocks, fixtures, test helpers      |
-| `packages/config`  | Shared env schemas, constants, routes     |
-
-### Infrastructure
-
-| Tool       | Usage            |
-| ---------- | ---------------- |
-| Docker     | Containerization |
-| Nginx      | Reverse proxy    |
-| CI/CD      | To be defined    |
-| Monitoring | To be defined    |
-
----
-
-## Project structure
+### Architecture
 
 ```
 orion-industries/
+│
 ├── apps/
-│   ├── web/          # Public frontend (React + Vite)
-│   ├── api/          # Backend API (NestJS)
-│   └── admin/        # Internal dashboard
+│   ├── web/            ── Public platform        React 18 · Vite · Tailwind v4
+│   ├── api/            ── Backend API             NestJS · Prisma · PostgreSQL
+│   └── admin/          ── Internal dashboard      React 18 · Vite · Tailwind v4
+│
 ├── packages/
-│   ├── ui/           # Shared UI components
-│   ├── types/        # Shared TypeScript types
-│   ├── utils/        # Shared utilities
-│   ├── i18n/         # Internationalization
-│   ├── testing/      # Shared test utilities
-│   └── config/       # Shared configuration
-├── infrastructure/   # Docker, Nginx, monitoring
-├── scripts/          # DB, build, deploy scripts
-└── docs/             # Architecture, API, security docs
+│   ├── ui/             ── Shared component library
+│   ├── types/          ── Shared TypeScript types & interfaces
+│   ├── utils/          ── Shared helpers, validators, formatters
+│   ├── i18n/           ── Internationalization    EN · FR · ES · ZH · AR · PT · HI
+│   ├── testing/        ── Shared mocks, fixtures, test helpers
+│   └── config/         ── Shared env schemas, constants, routes
+│
+├── infrastructure/     ── Docker · Nginx · Monitoring · Deployment
+├── scripts/            ── DB · Build · Deploy automation
+└── docs/               ── Architecture · API · Security · Conventions
 ```
 
-Full detailed structure is documented in [`docs/architecture/`](./docs/architecture/).
+### Tech Stack
 
----
+**Frontend** — `apps/web` & `apps/admin`
 
-## Getting started
+| Layer | Technology |
+|:---|:---|
+| Framework | React 18 + Vite |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS v4 |
+| State | Zustand |
+| Routing | React Router v6 |
+| HTTP | Axios |
+| Real-time | Socket.io Client |
+| i18n | i18next + react-i18next |
 
-> ⚠️ The local setup method (Docker vs manual) is not yet finalized. Both paths are documented below. Choose the one that matches your environment.
+**Backend** — `apps/api`
 
-### Prerequisites
+| Layer | Technology |
+|:---|:---|
+| Framework | NestJS 10 |
+| Language | TypeScript 5 |
+| ORM | Prisma |
+| Database | PostgreSQL 16 |
+| Auth | JWT + Passport.js |
+| Real-time | Socket.io (WebSockets) |
+| Validation | class-validator + class-transformer |
+| Security | Helmet + @nestjs/throttler |
 
-Make sure the following are installed on your machine:
+### Getting Started
 
-- [Node.js](https://nodejs.org/) `>= 20.x`
-- [npm](https://www.npmjs.com/) `>= 10.x` or [pnpm](https://pnpm.io/) `>= 9.x`
-- [Docker](https://www.docker.com/) + [Docker Compose](https://docs.docker.com/compose/) _(for Docker path)_
-- [Git](https://git-scm.com/)
-
----
-
-### Option A — Docker (recommended)
+**Prerequisites**
 
 ```bash
-# 1. Clone the repository
+node  >= 20.0.0
+npm   >= 10.0.0
+git   >= 2.40.0
+docker + docker-compose
+```
+
+**Setup**
+
+```bash
+# 1 — Clone
 git clone https://github.com/orion-industries/orion-industries.git
 cd orion-industries
 
-# 2. Copy environment variables
+# 2 — Environment
 cp .env.example .env
-# → Fill in your values in .env (see Environment variables section)
 
-# 3. Start all services
-docker compose up --build
-
-# 4. Apply database migrations
-docker compose exec api npx prisma migrate dev
-
-# 5. Seed the database (optional)
-docker compose exec api npx prisma db seed
-```
-
-Services will be available at:
-
-| Service               | URL                            |
-| --------------------- | ------------------------------ |
-| Web (frontend)        | http://localhost:5173          |
-| API (backend)         | http://localhost:3000          |
-| Admin dashboard       | http://localhost:5174          |
-| API docs (Swagger)    | http://localhost:3000/api/docs |
-| Database (PostgreSQL) | localhost:5432                 |
-
----
-
-### Option B — Manual installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/orion-industries/orion-industries.git
-cd orion-industries
-
-# 2. Install dependencies
+# 3 — Install
 npm install
+```
 
-# 3. Copy environment variables
-cp .env.example .env
-# → Fill in your values in .env
+**Run locally**
 
-# 4. Set up the database
-npx prisma migrate dev --prefix apps/api
+```bash
+# Docker (recommended)
+npm run docker:up
 
-# 5. Seed the database (optional)
-npx prisma db seed --prefix apps/api
-
-# 6. Start all apps in development mode
+# Manual
 npm run dev
 ```
 
----
+| Service | URL |
+|:---|:---|
+| Web | http://localhost:5173 |
+| API | http://localhost:3000 |
+| Admin | http://localhost:5174 |
+| Swagger | http://localhost:3000/api/docs |
+| PostgreSQL | localhost:5432 |
 
-### Useful commands
-
-```bash
-# Start only the frontend
-npm run dev --workspace=apps/web
-
-# Start only the backend
-npm run dev --workspace=apps/api
-
-# Start only the admin
-npm run dev --workspace=apps/admin
-
-# Build all apps
-npm run build
-
-# Run all tests
-npm run test
-
-# Lint all packages
-npm run lint
-
-# Format all files
-npm run format
-
-# Reset the database (⚠️ destroys all data)
-npm run db:reset
-```
-
----
-
-## Environment variables
-
-Never commit your `.env` file. Always use `.env.example` as the reference template.
+**Commands**
 
 ```bash
-cp .env.example .env
+npm run dev              # Start all apps
+npm run build            # Build all apps
+npm run test             # Run all tests
+npm run lint             # Lint all packages
+npm run db:migrate       # Apply DB migrations
+npm run db:seed          # Seed database
+npm run db:studio        # Prisma Studio
+npm run db:reset         # ⚠️  Reset all data
+npm run docker:up        # Start Docker stack
+npm run docker:down      # Stop Docker stack
 ```
 
-Key variables:
+### Languages
 
-```env
-# App
-NODE_ENV=development
-PORT=3000
+<div align="center">
 
-# Database
-DATABASE_URL=postgresql://user:password@localhost:5432/orion_db
+| `en` | `fr` | `es` | `zh` | `ar` | `pt` | `hi` |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| English | Français | Español | 中文 | العربية | Português | हिन्दी |
+| ✅ Primary | ✅ Active | 🔄 Planned | 🔄 Planned | 🔄 Planned | 🔄 Planned | 🔄 Planned |
 
-# Auth
-JWT_SECRET=your_jwt_secret_here
-JWT_EXPIRES_IN=7d
+</div>
 
-# Frontend URLs
-VITE_API_URL=http://localhost:3000
-VITE_WS_URL=ws://localhost:3000
+### Team
 
-# (Additional variables documented in .env.example)
+| Role | Name |
+|:---|:---|
+| Founder & CEO | **Théo ANDRIMANANARISOA** |
+| Co-founder | *Open — to be announced* |
+
+### License
+
 ```
-
-A complete `.env.example` with all required and optional variables is located at the root of the repository.
-
----
-
-## Languages
-
-Orion Industries targets a global audience. The platform is built with internationalization (i18n) first, supporting the world's most spoken languages:
-
-| Code | Language         | Status  |
-| ---- | ---------------- | ------- |
-| `en` | English          | Primary |
-| `fr` | French           | Active  |
-| `es` | Spanish          | Planned |
-| `zh` | Mandarin Chinese | Planned |
-| `ar` | Arabic           | Planned |
-| `ru` | Russian          | Planned |
-| `hi` | Hindi            | Planned |
-
-Translation files are managed in `packages/i18n/locales/`.
-
----
-
-## Contributing
-
-This is a proprietary project. External contributions are not open at this time.
-
-For internal team members, please refer to [`docs/conventions/`](./docs/conventions/) for:
-
-- Git branching strategy
-- Commit message format (Conventional Commits)
-- Code style and naming conventions
-- Pull request process
-- Testing requirements
-
----
-
-## Founders
-
-| Name                      | Role                         |
-| ------------------------- | ---------------------------- |
-| **Théo ANDRIMANANARISOA** | Founder & CEO                |
-| _(open)_                  | Co-founder — to be announced |
-
----
-
-## License
-
 Copyright © 2025 Orion Industries. All rights reserved.
+Proprietary & Confidential. Unauthorized use strictly prohibited.
+```
 
-This software and its source code are proprietary and confidential. No part of this codebase may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of Orion Industries.
+---
 
-See [`LICENSE`](./LICENSE) for the full terms.
+<a name="français"></a>
+## 🇫🇷 Français
+
+### Vision
+
+> *"Demain, la technologie ne se verra plus. Elle sera là, partout, silencieuse, intégrée à notre environnement, et capable de comprendre ce que nous faisons pour nous aider avant même qu'on le demande.*
+>
+> *C'est pour cela qu'Orion Industries a été créée : concevoir cette nouvelle génération de systèmes intelligents, où la technologie s'efface pour devenir une extension naturelle de l'intelligence humaine."*
+>
+> — **Théo ANDRIMANANARISOA**, Fondateur & CEO
+
+### À propos
+
+**Orion Industries** est une holding technologique mondiale qui conçoit la prochaine génération de systèmes intelligents — là où le hardware, le software et l'intelligence artificielle convergent pour créer des expériences seamless et invisibles.
+
+Du circuit embarqué à l'infrastructure cloud, en passant par l'IA, la robotique et le design centré humain, le groupe est animé par une conviction : **la technologie doit s'effacer dans son environnement et travailler *avec* l'humain, non *contre* lui.**
+
+### Divisions
+
+| Division | Domaine | Statut |
+|:---|:---|:---:|
+| ⬡ **Orion Software** | Logiciels d'entreprise · Plateformes SaaS · Développement sur mesure | `Actif` |
+| ⬡ **Orion AI Systems** | Intelligence artificielle · Machine learning · Systèmes autonomes | `Actif` |
+| ⬡ **Orion Hardware** | Conception électronique · Systèmes embarqués · Ingénierie PCB | `Actif` |
+| ⬡ **Orion Robotics** | Robotique industrielle · Automatisation collaborative | `Actif` |
+| ⬡ **Orion IoT & Smart Systems** | Objets connectés · Domotique · Environnements intelligents | `Actif` |
+| ⬡ **Orion Cloud & Infrastructure** | Architecture cloud · DevOps · Cybersécurité | `Actif` |
+| ⬡ **Orion Labs** | R&D appliquée · Incubation technologique · Recherche | `Actif` |
+| ⬡ **Orion Studio** | Design UI/UX · Design produit · Identité de marque | `Optionnel` |
+
+### Démarrage rapide
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/orion-industries/orion-industries.git
+cd orion-industries
+
+# Variables d'environnement
+cp .env.example .env
+
+# Installer les dépendances
+npm install
+
+# Lancer en local (Docker recommandé)
+npm run docker:up
+
+# Ou manuellement
+npm run dev
+```
+
+### Licence
+
+```
+Copyright © 2025 Orion Industries. Tous droits réservés.
+Logiciel propriétaire et confidentiel. Toute utilisation non autorisée est strictement interdite.
+```
+
+---
+
+<a name="español"></a>
+## 🇪🇸 Español
+
+### Visión
+
+> *"Mañana, la tecnología ya no será visible. Estará en todas partes — silenciosa, integrada en nuestro entorno, capaz de comprender lo que hacemos para ayudarnos antes incluso de que lo pidamos.*
+>
+> *Por eso se creó Orion Industries: para diseñar esta nueva generación de sistemas inteligentes, donde la tecnología se desvanece para convertirse en una extensión natural de la inteligencia humana."*
+>
+> — **Théo ANDRIMANANARISOA**, Fundador & CEO
+
+### Acerca de
+
+**Orion Industries** es una holding tecnológica global que diseña la próxima generación de sistemas inteligentes — donde hardware, software e inteligencia artificial convergen en experiencias invisibles y fluidas.
+
+### Inicio rápido
+
+```bash
+git clone https://github.com/orion-industries/orion-industries.git
+cd orion-industries
+cp .env.example .env
+npm install
+npm run docker:up
+```
+
+### Licencia
+
+```
+Copyright © 2025 Orion Industries. Todos los derechos reservados.
+Software propietario y confidencial. Uso no autorizado estrictamente prohibido.
+```
+
+---
+
+<a name="中文"></a>
+## 🇨🇳 中文
+
+### 愿景
+
+> *"明天，技术将不再可见。它将无处不在——沉默、融入我们的环境，在我们开口之前就能理解我们的需求并提供帮助。*
+>
+> *这就是 Orion Industries 创立的原因：设计新一代智能系统，让技术消融于环境之中，成为人类智慧的自然延伸。"*
+>
+> — **Théo ANDRIMANANARISOA**，创始人兼首席执行官
+
+### 关于我们
+
+**Orion Industries** 是一家全球技术控股公司，致力于打造下一代智能系统——硬件、软件与人工智能在此交汇，创造无缝、无形的体验。
+
+### 快速开始
+
+```bash
+git clone https://github.com/orion-industries/orion-industries.git
+cd orion-industries
+cp .env.example .env
+npm install
+npm run docker:up
+```
+
+### 许可证
+
+```
+版权所有 © 2025 Orion Industries。保留所有权利。
+专有且保密软件。严禁未经授权使用。
+```
+
+---
+
+<a name="العربية"></a>
+## 🇸🇦 العربية
+
+<div dir="rtl">
+
+### الرؤية
+
+> *"غداً، لن تكون التكنولوجيا مرئية. ستكون في كل مكان — صامتة، مندمجة في بيئتنا، قادرة على فهم ما نفعله لمساعدتنا قبل أن نطلب ذلك.*
+>
+> *لهذا أُسِّست Orion Industries: لتصميم هذا الجيل الجديد من الأنظمة الذكية، حيث تتلاشى التكنولوجيا لتصبح امتداداً طبيعياً للذكاء البشري."*
+>
+> — **Théo ANDRIMANANARISOA**، المؤسس والرئيس التنفيذي
+
+### نبذة عنا
+
+**Orion Industries** هي شركة قابضة تكنولوجية عالمية تعمل على هندسة الجيل القادم من الأنظمة الذكية — حيث يتقاطع الأجهزة والبرمجيات والذكاء الاصطناعي لإنشاء تجارب سلسة وغير مرئية.
+
+### البدء السريع
+
+```bash
+git clone https://github.com/orion-industries/orion-industries.git
+cd orion-industries
+cp .env.example .env
+npm install
+npm run docker:up
+```
+
+### الترخيص
+
+```
+حقوق النشر © 2025 Orion Industries. جميع الحقوق محفوظة.
+برنامج خاص وسري. يُحظر الاستخدام غير المصرح به بشكل صارم.
+```
+
+</div>
 
 ---
 
 <div align="center">
 
-**Orion Industries** — _Technology that disappears. Intelligence that remains._
+<img src="./apps/web/public/images/logo.png" alt="Orion Industries" width="48" />
+
+<br/>
+
+**ORION INDUSTRIES**
+
+*Technology that disappears. Intelligence that remains.*
+
+<br/>
+
+`Copyright © 2025 Orion Industries — All rights reserved`
 
 </div>
