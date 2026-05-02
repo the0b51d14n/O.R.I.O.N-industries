@@ -1,0 +1,174 @@
+# =============================================================================
+# ORION INDUSTRIES — .gitattributes
+# Normalisation des fins de ligne et diff pour le monorepo
+# =============================================================================
+
+
+# =============================================================================
+# COMPORTEMENT PAR DÉFAUT
+# Tous les fichiers texte : LF en repo, conversion auto selon l'OS en local
+# =============================================================================
+
+* text=auto eol=lf
+
+
+# =============================================================================
+# CODE SOURCE — toujours LF
+# =============================================================================
+
+# TypeScript / JavaScript
+*.ts        text eol=lf
+*.tsx       text eol=lf
+*.js        text eol=lf
+*.jsx       text eol=lf
+*.mjs       text eol=lf
+*.cjs       text eol=lf
+
+# Styles
+*.css       text eol=lf
+*.scss      text eol=lf
+*.sass      text eol=lf
+*.less      text eol=lf
+
+# Templates & markup
+*.html      text eol=lf
+*.htm       text eol=lf
+*.xml       text eol=lf
+*.svg       text eol=lf
+
+# Data & config
+*.json      text eol=lf
+*.jsonc     text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.toml      text eol=lf
+*.ini       text eol=lf
+*.env       text eol=lf
+*.env.*     text eol=lf
+
+# Prisma
+*.prisma    text eol=lf
+
+# Docker
+Dockerfile          text eol=lf
+Dockerfile.*        text eol=lf
+docker-compose.yml  text eol=lf
+docker-compose.*.yml text eol=lf
+.dockerignore       text eol=lf
+
+# Shell scripts — toujours LF (sinon bash crashe sur Linux/Mac)
+*.sh        text eol=lf
+*.bash      text eol=lf
+*.zsh       text eol=lf
+
+# Nginx
+*.conf      text eol=lf
+*.nginx     text eol=lf
+
+# Documentation
+*.md        text eol=lf
+*.mdx       text eol=lf
+*.txt       text eol=lf
+*.rst       text eol=lf
+
+# Fichiers de config racine
+.gitignore          text eol=lf
+.gitattributes      text eol=lf
+.editorconfig       text eol=lf
+.eslintrc*          text eol=lf
+.prettierrc*        text eol=lf
+.nvmrc              text eol=lf
+.npmrc              text eol=lf
+LICENSE             text eol=lf
+
+
+# =============================================================================
+# WINDOWS SCRIPTS — CRLF obligatoire
+# =============================================================================
+
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.ps1       text eol=crlf
+
+
+# =============================================================================
+# BINAIRES — pas de conversion
+# =============================================================================
+
+# Images
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.webp      binary
+*.avif      binary
+*.tiff      binary
+*.bmp       binary
+
+# Fonts
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.otf       binary
+*.eot       binary
+
+# Archives
+*.zip       binary
+*.tar       binary
+*.gz        binary
+*.tgz       binary
+*.rar       binary
+*.7z        binary
+
+# Documents
+*.pdf       binary
+*.xlsx      binary
+*.xls       binary
+*.docx      binary
+*.doc       binary
+*.pptx      binary
+
+# Audio / Vidéo
+*.mp3       binary
+*.mp4       binary
+*.wav       binary
+*.ogg       binary
+*.webm      binary
+
+# Certificats & clés (traités comme binaires pour éviter toute corruption)
+*.pem       binary
+*.key       binary
+*.crt       binary
+*.cert      binary
+*.p12       binary
+*.pfx       binary
+
+
+# =============================================================================
+# DIFF — améliore la lisibilité des diffs sur GitHub / GitLab
+# =============================================================================
+
+*.ts        diff=typescript
+*.tsx       diff=typescript
+*.js        diff=javascript
+*.jsx       diff=javascript
+*.json      diff=json
+*.md        diff=markdown
+*.prisma    diff=prisma
+
+
+# =============================================================================
+# LINGUIST — GitHub language stats (optionnel)
+# Évite que les fichiers générés faussent les stats du repo
+# =============================================================================
+
+# Fichiers générés — exclus des stats
+apps/api/src/database/prisma/generated/** linguist-generated=true
+packages/*/dist/**                         linguist-generated=true
+apps/*/dist/**                             linguist-generated=true
+
+# Fichiers de config — non comptés comme code principal
+*.json      linguist-language=JSON
+*.yml       linguist-language=YAML
+*.yaml      linguist-language=YAML
